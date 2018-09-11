@@ -1,6 +1,3 @@
-v16
---
-
 When redis.maxclients is not set in the manifest, we set the fdlimit to 12500 (25% buffer on top of the default 10k maxclients).
 If redis.maxclients is set, the fdlimit will be automatically set to 25% higher.
 
@@ -11,5 +8,5 @@ These changes are as follows:
 * Set memory overcommit handling mode to 1
 
 Package Changes:
-* Bumped bpm to v0.6.0
-* Bumped bpm to v0.7.0
+
+* Bumped bpm to v0.12.3
