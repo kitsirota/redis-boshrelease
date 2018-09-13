@@ -175,7 +175,7 @@ dir "<%= p('base_dir') %>"
 # different interval, or to listen to another port, and so on.
 #
 <% if_p("redis.replication") do |replication| %>
-<% if replication == true %>
+<% if replication %>
 <% unless spec.bootstrap -%>
 slaveof <%= link("redis").instances.find {|redis| redis.bootstrap }.address %> <%= p("port") %>
 <% end -%>
